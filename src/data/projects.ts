@@ -1,0 +1,77 @@
+import type { Project } from "../types";
+
+export const projects: Project[] = [
+  {
+    id: "impms",
+    title: "IMPMS",
+    description: "Imelda Municipal Personnel Management System for personnel records, payroll data, departments, digital records, user access, backups, and license-controlled deployment.",
+    tech: ["Electron", "React", "TypeScript", "MySQL", "Tailwind CSS"],
+    previewType: "ui-animation",
+    cover: "/impms/impms-3d.png",
+    video: "/impms/impms-record.mp4",
+    media: [
+      { title: "Project Walkthrough", src: "/impms/impms-record.mp4", type: "video" },
+      { title: "Dashboard Overview", src: "/impms/dashboard.png", type: "image" },
+      { title: "Personnel List", src: "/impms/personnel-list.png", type: "image" },
+      { title: "Add New Personnel", src: "/impms/add-new-personnel.png", type: "image" },
+      { title: "Bulk Employee Import", src: "/impms/bulk-employees-import.png", type: "image" },
+      { title: "Digital Records", src: "/impms/digital-records.png", type: "image" },
+      { title: "Departments", src: "/impms/departments.png", type: "image" },
+      { title: "Department Roster", src: "/impms/departments-personnel-roster.png", type: "image" },
+      { title: "License Activation", src: "/impms/settings-license-activation.png", type: "image" },
+      { title: "Users & Access", src: "/impms/settings-users.png", type: "image" },
+      { title: "Backup & Restore", src: "/impms/settings-backup-restore.png", type: "image" },
+      { title: "Access History", src: "/impms/settings-access-history.png", type: "image" },
+      { title: "About System", src: "/impms/about.png", type: "image" },
+      { title: "Login Screen", src: "/impms/login-screen.png", type: "image" }
+    ],
+  },
+  {
+    id: "ocr-procurement",
+    title: "OCR Procurement System",
+    description: "BAC Procurement Data Extraction desktop tool that uses OCR to parse procurement screenshots, review structured rows, accumulate datasets, and export clean Excel workbooks.",
+    tech: ["C#", ".NET 8", "OCR", "Excel Export", "Desktop App"],
+    previewType: "image",
+    cover: "/ocr-procurement/procurement-data-extraction.png",
+    media: [
+      { title: "OCR Intake Workspace", src: "/ocr-procurement/procurement-data-extraction.png", type: "image" },
+      { title: "Save Preview to Dataset", src: "/ocr-procurement/save-preview-to-dataset.png", type: "image" },
+      { title: "Accumulated Dataset Result", src: "/ocr-procurement/accumulated-dataset-result.png", type: "image" },
+      { title: "Export to Excel Dialog", src: "/ocr-procurement/export-to-excel.png", type: "image" },
+      { title: "Exported Excel Workbook", src: "/ocr-procurement/data-exported-to-excel.png", type: "image" }
+    ],
+  },
+  {
+    id: "edusched",
+    title: "EduSched",
+    description: "School Management System for student enrollment, scheduling, grading, attendance, and reports.",
+    tech: ["C#", ".NET 8", "ASP.NET Core", "React", "TypeScript", "MySQL"],
+    previewType: "ui-animation",
+    cover: "/edusched/dashboard-main.png",
+    video: "/edusched/EduSchedVer1.2.0.mp4",
+    media: [
+      { title: "Project Walkthrough (v1.2.0)", src: "/edusched/EduSchedVer1.2.0.mp4", type: "video" },
+      { title: "Scheduling Dashboard", src: "/edusched/dashboard-main.png", type: "image" },
+      { title: "Student Enrollment Form - Basic Info", src: "/edusched/enrollment-form-1.png", type: "image" },
+      { title: "Student Enrollment Form - Parent Info", src: "/edusched/enrollment-form-2.png", type: "image" },
+      { title: "Enrollment Completion", src: "/edusched/enrollment-form-3.png", type: "image" },
+      { title: "Teacher Profile Management", src: "/edusched/teacher-management.png", type: "image" },
+      { title: "Clear Schedules Confirmation", src: "/edusched/clear-schedules-confirm.png", type: "image" },
+      { title: "Weekly Schedule (Section View)", src: "/edusched/scheduling-grid-section.png", type: "image" },
+      { title: "Weekly Schedule (Teacher View)", src: "/edusched/scheduling-grid-teacher.png", type: "image" },
+      { title: "Sections & Student Management", src: "/edusched/sections-management.png", type: "image" },
+      { title: "Subject Management List", src: "/edusched/subject-management-list.png", type: "image" },
+      { title: "Edit Subject Details", src: "/edusched/subject-edit-modal.png", type: "image" },
+      { title: "Edit Teacher Assignment", src: "/edusched/teacher-edit-modal.png", type: "image" },
+      { title: "Manage School Schedule (Periods)", src: "/edusched/manage-school-schedule.png", type: "image" },
+      { title: "Teacher Workload Overview", src: "/edusched/teacher-management-list.png", type: "image" }
+    ],
+  },
+  {
+    id: "scanner",
+    title: "Checkpoint Scanner",
+    description: "Facial recognition and checkpoint data system built for fast field verification workflows.",
+    tech: ["React", "AI", "Node.js"],
+    previewType: "image",
+  },
+];

@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b0b0f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0b0b0f;
+  overflow-x: hidden;
+}
+
+/* ── Light Theme ── */
+.light-theme {
+  color-scheme: light;
+}
+
+.light-theme body {
+  background: #EEF2FF;
+}
+
+.light-theme .bg-ink,
+.light-theme [class*="bg-\\[#07101D\\]"],
+.light-theme [class*="bg-\\[#0B1220\\]"] {
+  background-color: #EEF2FF;
+}
+
+/* Text overrides */
+.light-theme .text-white {
+  color: #0f172a;
+}
+
+.light-theme .text-white\/80,
+.light-theme .text-white\/78,
+.light-theme .text-white\/76,
+.light-theme .text-white\/74,
+.light-theme .text-white\/72,
+.light-theme .text-white\/70,
+.light-theme .text-white\/68,
+.light-theme .text-white\/66,
+.light-theme .text-white\/62,
+.light-theme .text-white\/60,
+.light-theme .text-white\/50,
+.light-theme .text-white\/40 {
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.light-theme .text-white\/88,
+.light-theme .text-white\/84 {
+  color: rgba(15, 23, 42, 0.85);
+}
+
+/* Section cards */
+.light-theme .bg-white\/\[0\.04\],
+.light-theme .bg-white\/\[0\.045\],
+.light-theme .bg-white\/\[0\.055\],
+.light-theme .bg-white\/\[0\.06\],
+.light-theme .bg-white\/10,
+.light-theme .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+/* Main section panels */
+.light-theme .rounded-3xl.backdrop-blur-2xl {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(99, 120, 220, 0.18) !important;
+  box-shadow: 0 8px 40px rgba(30, 60, 180, 0.08), 0 1px 0 rgba(255,255,255,0.9) inset;
+}
+
+/* Hero section */
+.light-theme .rounded-2xl.backdrop-blur-xl {
+  background: rgba(255, 255, 255, 0.80) !important;
+  border-color: rgba(99, 120, 220, 0.2) !important;
+  box-shadow: 0 10px 48px rgba(30, 60, 180, 0.10);
+}
+
+/* Borders */
+.light-theme .border-white\/10,
+.light-theme .border-white\/12,
+.light-theme .border-white\/20,
+.light-theme .border-white\/5 {
+  border-color: rgba(99, 120, 220, 0.15);
+}
+
+/* cyanGlow accent → indigo in light mode */
+.light-theme .text-cyanGlow {
+  color: #4F46E5 !important;
+}
+
+.light-theme .hover\:text-cyanGlow:hover {
+  color: #4F46E5 !important;
+}
+
+.light-theme .border-white\/\[0\.04\] {
+  border-color: rgba(99, 120, 220, 0.12);
+}
+
+/* Skill cards */
+.light-theme .rounded-xl.border {
+  background: rgba(255,255,255,0.9);
+  border-color: rgba(99, 120, 220, 0.15);
+}
+
+/* Tech tags */
+.light-theme .tech-tag {
+  background-color: rgba(79, 70, 229, 0.08);
+  color: #3730a3;
+  border-color: rgba(79, 70, 229, 0.18);
+}
+
+/* Project card overrides */
+.light-theme .project-card {
+  background-color: #ffffff;
+  border-color: rgba(99, 120, 220, 0.12);
+  box-shadow: 0 8px 32px rgba(30, 60, 180, 0.06);
+}
+
+/* Section title */
+.light-theme .section-title {
+  color: #0f172a;
+}
+
+/* Contact icon boxes */
+.light-theme .text-white\/40 {
+  color: rgba(15, 23, 42, 0.5);
+}
+
+/* Footer */
+.light-theme footer {
+  background: rgba(255,255,255,0.7) !important;
+  border-color: rgba(99, 120, 220, 0.12) !important;
+}
+
+/* ── White-colored icons (GitHub, Next.js) — invert in light mode ── */
+.light-theme [data-invert-light="true"] {
+  filter: brightness(0) opacity(0.7);
+}
+
+/* ── Backdrop blur ── */
+.light-theme .backdrop-blur-xl,
+.light-theme .backdrop-blur-2xl {
+  backdrop-filter: blur(20px) saturate(1.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+::selection {
+  background: rgba(56, 213, 255, 0.3);
+}
+
+.cursor-glow {
+  background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(56, 213, 255, 0.12), transparent 42%);
+}
+
+.form-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.055);
+  padding: 0.9rem 1rem;
+  color: white;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.form-field::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.form-field:focus {
+  border-color: rgba(56, 213, 255, 0.68);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(56, 213, 255, 0.1);
+}
+
+.light-theme .form-field {
+  border-color: rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  color: #0b1220;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+}
+
+.light-theme .form-field::placeholder {
+  color: rgba(15, 23, 42, 0.5);
+}
+
+.light-theme .form-field:focus {
+  border-color: rgba(37, 99, 235, 0.72);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.section-title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: white;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  bottom: -0.45rem;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.section-title::after {
+  content: "+";
+  color: #6d7cff;
+  font-size: 0.95rem;
+}
+
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.modal-scroll:hover,
+.modal-scroll:focus-within {
+  scrollbar-color: rgba(96, 165, 250, 0.55) rgba(255, 255, 255, 0.06);
+}
+
+.modal-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.modal-scroll:hover::-webkit-scrollbar-thumb,
+.modal-scroll:focus-within::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.5);
+  border: 2px solid rgba(11, 18, 32, 0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Contact form inputs in light mode ── */
+.light-theme input[type="text"],
+.light-theme input[type="email"],
+.light-theme textarea {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+  border-color: rgba(99, 120, 220, 0.22) !important;
+  box-shadow: 0 2px 8px rgba(30, 60, 180, 0.05);
+}
+
+.light-theme input[type="text"]::placeholder,
+.light-theme input[type="email"]::placeholder,
+.light-theme textarea::placeholder {
+  color: rgba(15, 23, 42, 0.38) !important;
+}
+
+.light-theme input[type="text"]:focus,
+.light-theme input[type="email"]:focus,
+.light-theme textarea:focus {
+  border-color: rgba(79, 70, 229, 0.6) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1) !important;
+  outline: none;
+}
+
+/* ── Project card descriptions in light mode ── */
+.light-theme .text-white\/62,
+.light-theme .text-white\/50,
+.light-theme .text-white\/40,
+.light-theme .text-white\/30 {
+  color: rgba(15, 23, 42, 0.55) !important;
+}
+
+/* ── Project card tech tags in light mode ── */
+.light-theme .text-blue-400 {
+  color: #4338ca;
+}
+
+.light-theme .bg-blue-500\/10 {
+  background-color: rgba(79, 70, 229, 0.08);
+}
+
+.light-theme .border-blue-500\/20 {
+  border-color: rgba(79, 70, 229, 0.2);
+}
+
+/* ── Hide site navbar when a project modal is open ── */
+.modal-open header {
+  display: none !important;
+}
+
+
